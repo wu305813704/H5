@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body html{
+            width: 100%;
+            height:100%;
+            font-size: 100px;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .dispat-addPrice{
+            width:100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            font-size: 3rem;
+        }
+        .dispat-addPrice-top{
+            width: 100%;
+            overflow: hidden;
+            color: rgb(0,0,0);
+        }
+        .fl{
+            float: left;
+        }
+        .fr{
+            float: right;
+        }
+        .dispat-addPrice-bottom{
+            overflow: hidden;
+        }
+        ul{
+            float: left;
+            color: rgb(0,0,0);
+            margin: 0 6rem;
+        }
+        ul li{
+            list-style: none;
+            width: 3rem;
+        }
+        .on{
+            border-bottom: 1px solid rgb(255,255,255);
+        }
+    </style>
+</head>
+<body>
+<div class="dispat-addPrice" style= "display: block">
+    <div class="dispat-addPrice-top clearfix">
+        <span class="fl" @click="showHiddle(-1)">取消</span>
+        <span class="fr" @click="compeletSend(1)">完成</span>
+    </div>
+    <div class="dispat-addPrice-bottom" style="display: block">
+        <ul style="display: inline" class="ulyuyue">
+            <li>
+                <span>1</span>
+            </li>
+            <li class="on">
+                <span>2</span>
+            </li>
+            <li>
+                <span>3</span>
+            </li>
+            <li>
+                <span>4</span>
+            </li>
+            <li>
+                <span>5</span>
+            </li>
+            <li>
+                <span>6</span>
+            </li>
+            <li>
+                <span>7</span>
+            </li>
+        </ul>
+        <ul style="display: inline" class="ulyuyue">
+            <li>
+                <span>1</span>
+            </li>
+            <li class="on">
+                <span>2</span>
+            </li>
+            <li>
+                <span>3</span>
+            </li>
+            <li>
+                <span>4</span>
+            </li>
+            <li>
+                <span>5</span>
+            </li>
+            <li>
+                <span>6</span>
+            </li>
+            <li>
+                <span>7</span>
+            </li>
+        </ul>
+        <ul style="display: inline" class="ulyuyue">
+            <li>
+                <span>1</span>
+            </li>
+            <li class="on">
+                <span>2</span>
+            </li>
+            <li>
+                <span>3</span>
+            </li>
+            <li>
+                <span>4</span>
+            </li>
+            <li>
+                <span>5</span>
+            </li>
+            <li>
+                <span>6</span>
+            </li>
+            <li>
+                <span>7</span>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

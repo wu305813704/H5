@@ -1,0 +1,43 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<input type="time">-->
+<!--<input type="datetime">-->
+<!--<input type="datetime-local" id="input">-->
+<!--<button id="btn">获取时间</button>-->
+<!--<script>-->
+    <!--var input = document.getElementById("input");-->
+    <!--var btn = document.getElementById("btn");-->
+    <!--btn.onclick = function () {-->
+        <!--console.log(input.value)-->
+    <!--}-->
+
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+<html>
+<title>Test_datetime_local</title>
+<body>
+datatime-local:<input type="datetime-local" id="mydatetime-local"/>
+<button onclick="myFunction()">Click here</button>
+<p id="demo"></p>
+<script>
+    function myFunction(){
+        var x=document.getElementById("mydatetime-local").value;
+        year=x.substring(0,4);
+        month=x.substring(5,7);
+        day=x.substring(8,10);
+        hour=x.substring(11,13);
+        minute=x.substring(14)
+        format=year+"-"+day+"-"+month +" " +hour+"-"+minute;
+        document.getElementById("demo").innerHTML = format;
+        console.log(format);
+    }
+    myFunction()
+</script>
+</body>
+</html>

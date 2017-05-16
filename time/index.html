@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>预约时间选择</title>
+<!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+<!--<link rel="stylesheet" type="text/css" href="datedropper.css">-->
+<!--<link rel="stylesheet" type="text/css" href="timedropper.min.css">-->
+<style type="text/css">
+.demo{margin:80px auto 40px auto;width:640px}
+.input{padding:6px;border:1px solid #d3d3d3}
+</style>
+
+</head>
+
+<body>
+
+<div id="main">
+
+	<div class="demo">
+		<span>日期：<input type="text" class="input" id="pickdate" /></span>
+		<span>时间：<input type="text" class="input" id="picktime" /></span>
+	</div>
+	
+</div>
+
+<!--<script type="text/javascript" src="jquery-1.12.3.min.js"></script>-->
+<!--<script src="datedropper.min.js"></script>-->
+<!--<script src="timedropper.min.js"></script>-->
+<script>
+$("#pickdate").dateDropper({
+	animate: false,
+	format: 'Y-m-d',
+	maxYear: '2020'
+});
+$("#picktime").timeDropper({
+	meridians: false,
+	format: 'HH:mm',
+});
+</script>
+</body>
+</html>

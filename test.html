@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var ws = new WebSocket("ws://192.168.3.108:8080/qcwy/wxWebSocket/1");
+        ws.onopen = function () {
+            alert("ddddddd");
+            heartCheck.start();
+        }
+        ws.onerror = function () {
+            ws = new WebSocket("ws://192.168.3.108:8080/qcwy/wxWebSocket/1");
+        }
+        ws.onclose = function () {
+
+        }
+        ws.onmessage = function (data) {
+            alert(data)
+            heartCheck.reset();
+        }
+
+        var heartCheck = {
+            timeout: 5000,//60s
+            timeoutObj: null,
+            reset: function () {
+                clearTimeout(this.timeoutObj);
+                this.start();
+            },
+            start: function () {
+                this.timeoutObj = setTimeout(function () {
+                    ws.send("HeartBeat");
+                }, this.timeout)
+            }
+        }
+    </script>
+</body>
+</html>
